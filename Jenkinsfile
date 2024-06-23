@@ -30,10 +30,14 @@ pipeline {
             steps{
                 sh'''
                     test build/index.html
-                    npm ci
-                    npm run test
+                    npm test
                 '''
             }
+        }
+    }
+    post{
+        always{
+            junit 'test-results/junit.xml'
         }
     }
 }
