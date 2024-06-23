@@ -29,7 +29,7 @@ pipeline {
             }
             steps{
                 sh'''
-                    jest build/index.html
+                    test build/index.html
                     npm test
                 '''
             }
