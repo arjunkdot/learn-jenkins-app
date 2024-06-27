@@ -1,0 +1,8 @@
+pipeline{
+    agent any
+    stages {
+        stage('Build Docker Imaf'){
+            sh 'docker build -t my-playwright .'
+        }
+    }
+}
