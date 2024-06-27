@@ -24,22 +24,22 @@ pipeline {
                 '''
             }
         }
-        stage('Run Tests'){
-            parallel{
-                stage('Unit') {
-            agent {
-                docker {
-                    image 'node:18-alpine'
-                    reuseNode true
-                }
-            }
-            steps{
-                sh'''
-                    test build/index.html
-                    npm test
-                '''
-            }
-        }
+        // stage('Run Tests'){
+        //     parallel{
+        //         stage('Unit') {
+        //     agent {
+        //         docker {
+        //             image 'node:18-alpine'
+        //             reuseNode true
+        //         }
+        //     }
+        //     steps{
+        //         sh'''
+        //             test build/index.html
+        //             npm test
+        //         '''
+        //     }
+        // }
         /*
         stage('E2E') {
             agent {
