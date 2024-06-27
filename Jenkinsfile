@@ -57,10 +57,10 @@ pipeline {
                 '''
             }
         }*/
-            }
-        }
+        //     }
+        // }
 
-         stage('Deploy Staging') {
+        stage('Deploy Staging') {
             agent {
                 docker {
                     image 'node:18-alpine'
